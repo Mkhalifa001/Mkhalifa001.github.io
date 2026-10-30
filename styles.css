@@ -3,3 +3,486 @@
 @media (max-width:850px){.hero-bottom{grid-template-columns:1fr;gap:25px}.hero-actions{justify-content:flex-start}.case{grid-template-columns:230px 1fr;gap:45px}.metrics div{display:block}.metrics div+div{padding-left:23px}.metrics strong{display:block}.project-image{height:210px}.pub-list>a,.pub-plain{grid-template-columns:175px 1fr 14px}.about-strip{gap:35px}}
 @media (max-width:640px){.wrap{padding-left:20px;padding-right:20px}.site-header{height:67px}.nav{gap:14px}nav{gap:14px}nav a{font-size:11px}nav a:nth-child(2),nav a:nth-child(3){display:none}.nav-resume{margin-left:auto;font-size:11px;padding:9px}.hero{padding-top:57px}.hero h1{font-size:clamp(39px,9.2vw,58px)}.hero-bottom p{font-size:15px}.metrics{grid-template-columns:repeat(3,1fr);margin-top:44px}.metrics div{padding:19px 6px 19px 0}.metrics div+div{padding-left:12px}.metrics strong{font-size:25px}.metrics span{font-size:10px}.section{padding-top:68px;padding-bottom:64px}.section-heading{display:block;margin-bottom:25px}.section-heading>p{margin-top:17px}.project-grid,.mini-grid,.about-strip{grid-template-columns:1fr}.project-image{height:235px}.case{display:block;padding-top:32px;padding-bottom:42px}.case-side{margin-bottom:22px}.case h3{font-size:25px}.case-context{margin-bottom:6px}.result-metric{align-items:flex-start;flex-direction:column;gap:6px}.result-metric strong{font-size:32px}.result-metric.three strong{font-size:23px}.inline-figure{padding:9px}.pub-list>a,.pub-plain{grid-template-columns:1fr 14px;gap:6px}.pub-list>a span:first-child,.pub-plain span:first-child{grid-column:1/-1}.pub-list>a strong,.pub-plain strong{grid-column:1/2}.contact-inner{display:block;padding-top:65px;padding-bottom:65px}.contact-actions{flex-direction:row;margin-top:25px}.footer-inner{flex-wrap:wrap}.footer-inner span:nth-child(2){display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-card{transition:none}}
+
+/* =====================================================
+   ROBOTIC DRILLING GALLERY
+   Added for the CAD, kinematics, Simulink and video showcase.
+   All changes are scoped to the drilling section.
+   ===================================================== */
+.drilling-showcase {
+  margin-top: 30px;
+}
+
+.drilling-gallery-intro {
+  border-top: 1px solid var(--line);
+  padding: 18px 0 21px;
+}
+
+.drilling-eyebrow,
+.drilling-visual-index {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.drilling-gallery-intro p {
+  margin: 7px 0 0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.drilling-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.drilling-visual {
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.drilling-visual-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 265px;
+  background: #f7f8f6;
+  padding: 17px;
+}
+
+.drilling-visual-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.drilling-visual-wide {
+  grid-column: 1 / -1;
+}
+
+.drilling-visual-frame-wide {
+  height: auto;
+  min-height: 190px;
+  padding: 16px;
+}
+
+.drilling-visual-frame-wide img {
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+}
+
+.drilling-visual figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--line);
+  padding: 14px 16px 17px;
+}
+
+.drilling-visual figcaption strong,
+.drilling-video-heading strong {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+
+.drilling-visual figcaption span:last-child {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.drilling-video-panel {
+  margin: 16px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.drilling-video-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 17px 18px;
+}
+
+.drilling-video-panel video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #101715;
+}
+
+.drilling-video-panel figcaption {
+  padding: 12px 17px 16px;
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .drilling-visual-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .drilling-visual-wide {
+    grid-column: auto;
+  }
+  .drilling-visual-frame {
+    height: 275px;
+  }
+  .drilling-visual-frame-wide {
+    height: auto;
+    min-height: 130px;
+    padding: 10px;
+  }
+  .drilling-visual-frame-wide img {
+    max-height: 250px;
+  }
+}
+
+
+/* =====================================================
+   GPS-DENIED NAVIGATION RESEARCH GALLERY
+   Scope: project #navigation only; drilling and filtration
+   styles are unchanged.
+   ===================================================== */
+.navigation-showcase {
+  margin-top: 30px;
+}
+.navigation-showcase-intro {
+  padding: 18px 0 21px;
+  border-top: 1px solid var(--line);
+}
+.navigation-visual-index {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.navigation-showcase-intro p {
+  margin-top: 7px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.navigation-visual-panel {
+  margin: 0 0 17px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+.navigation-media-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 17px 18px;
+}
+.navigation-media-heading strong {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+.navigation-figure-frame {
+  padding: 15px;
+  background: #f7f8f6;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.navigation-figure-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  margin: auto;
+  object-fit: contain;
+}
+.navigation-video-panel video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #101715;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.navigation-visual-panel figcaption {
+  padding: 13px 17px 16px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+@media (max-width:640px) {
+  .navigation-figure-frame { padding: 7px; }
+  .navigation-media-heading { padding: 15px; }
+  .navigation-visual-panel figcaption { padding: 12px 15px 15px; }
+}
+
+
+/* GPS-DENIED NAVIGATION: new published-method workflow panel */
+.navigation-workflow-frame {
+  background: #fff;
+  padding: 18px;
+}
+.navigation-workflow-frame a {
+  display: block;
+  cursor: zoom-in;
+}
+.navigation-workflow-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+.navigation-workflow-frame a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .navigation-workflow-frame { padding: 8px; }
+}
+
+
+/* =====================================================
+   MODEL PREDICTIVE CONTROL CASE STUDY
+   Scope: project #mpc. All existing galleries unchanged.
+   ===================================================== */
+.mpc-showcase {
+  margin-top: 30px;
+}
+.mpc-showcase-intro {
+  border-top: 1px solid var(--line);
+  padding: 18px 0 21px;
+}
+.mpc-showcase-intro p {
+  margin-top: 7px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.mpc-visual-index {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.mpc-model-panel {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  margin: 0 0 17px;
+  background: #fff;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.mpc-model-art {
+  background: #f7f8f6;
+  min-height: 270px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mpc-model-art img {
+  width: 100%;
+  height: auto;
+  max-height: 270px;
+  object-fit: contain;
+}
+.mpc-model-panel figcaption {
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-left: 1px solid var(--line);
+}
+.mpc-model-panel figcaption strong,
+.mpc-media-heading strong {
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+.mpc-model-panel figcaption span:last-child {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.mpc-result-panel {
+  margin: 0 0 17px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+.mpc-media-heading {
+  padding: 17px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.mpc-plot-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f8f6;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 16px;
+  cursor: zoom-in;
+}
+.mpc-plot-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+}
+.mpc-plot-image:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+.mpc-result-panel figcaption {
+  color: var(--muted);
+  padding: 13px 17px 16px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .mpc-model-panel { grid-template-columns: 1fr; }
+  .mpc-model-art { min-height: 210px; }
+  .mpc-model-art img { max-height: 240px; }
+  .mpc-model-panel figcaption { border-left: 0; border-top: 1px solid var(--line); padding: 17px; }
+  .mpc-plot-image { padding: 7px; }
+  .mpc-media-heading { padding: 15px; }
+  .mpc-result-panel figcaption { padding: 12px 15px 15px; }
+}
+
+
+/* =====================================================
+   ADDITIONAL WORK — IMAGE PROJECT CARDS
+   Preserves the featured-project and case-study galleries.
+   ===================================================== */
+.mini-project-media {
+  margin: 15px 0 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.mini-project-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 230px;
+  padding: 11px;
+  background: #f9faf8;
+  cursor: zoom-in;
+}
+.mini-project-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .2s ease;
+}
+.mini-project-media a:hover img { transform: scale(1.025); }
+.mini-project-media a:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.mini-project-media figcaption {
+  min-height: 42px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.mini-project h3 { margin-top: 0; }
+@media (max-width: 850px) and (min-width: 641px) {
+  .mini-project-media a { height: 195px; padding: 8px; }
+}
+@media (max-width: 640px) {
+  .mini-project-media a { height: 280px; }
+  .mini-project-media figcaption { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mini-project-media img { transition: none; }
+}
+
+
+/* =====================================================
+   HOMEPAGE PORTRAIT — placed beside the introduction
+   and calls-to-action; remaining sections are unchanged.
+   ===================================================== */
+.hero-bottom {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+}
+.hero-aside {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+.hero-portrait {
+  margin: 0;
+  width: 170px;
+  flex: 0 0 170px;
+  aspect-ratio: 1 / 1;
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  outline: 1px solid var(--line);
+  overflow: hidden;
+  background: var(--accent-light);
+  box-shadow: 0 10px 26px rgba(23,35,35,.10);
+}
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+.hero-aside .hero-actions {
+  display: flex;
+  flex: 1 1 170px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 9px;
+  max-width: 190px;
+}
+.hero-aside .primary, .hero-aside .secondary {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+@media (max-width: 850px) {
+  .hero-bottom { grid-template-columns: 1fr; gap: 26px; }
+  .hero-aside { justify-content: flex-start; }
+}
+@media (max-width: 640px) {
+  .hero-portrait { width: 136px; flex-basis: 136px; }
+  .hero-aside { gap: 16px; }
+  .hero-aside .hero-actions { flex: 0 1 180px; }
+  .hero-aside .primary { padding: 14px 12px; }
+}
+@media (max-width: 380px) {
+  .hero-portrait { width: 116px; flex-basis: 116px; }
+  .hero-aside { gap: 12px; }
+  .hero-aside .hero-actions { flex-basis: 160px; }
+  .hero-aside .secondary { padding: 12px 6px; }
+}

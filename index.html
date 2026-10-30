@@ -12,10 +12,9 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header" id="top">
     <div class="nav wrap">
-      <a class="brand" href="#top">MK<span class="brand-dot">.</span></a>
+      <a class="brand" href="#top">MK</a>
       <nav aria-label="Main navigation">
         <a href="#work">Projects</a>
-        <a href="#about">About</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -26,10 +25,15 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-heading">
       <div class="eyebrow"><span class="status-dot"></span> Engineering Portfolio &nbsp; / &nbsp; Ottawa, Canada</div>
-      <h1 id="hero-heading">Engineering at the intersection of <em>control, robotics</em> and mechanical design.</h1>
+      <h1 id="hero-heading">Engineering at the intersection of <em>control, robotics</em> and <em>mechanical design</em>.</h1>
       <div class="hero-bottom">
         <p>I'm Mohamed Khalifa, a mechanical engineering master's graduate focused on turning mathematical models into tested engineering systems—from drone navigation algorithms to robotic motion control and electromechanical prototypes.</p>
-        <div class="hero-actions"><a class="primary" href="#work">Explore projects <span aria-hidden="true">↗</span></a><a class="secondary" href="#contact">Get in touch</a></div>
+        <div class="hero-aside">
+          <figure class="hero-portrait">
+            <img src="assets/mohamed_portrait.jpg" alt="Portrait of Mohamed Khalifa" width="704" height="880" decoding="async" fetchpriority="high" />
+          </figure>
+          <div class="hero-actions"><a class="primary" href="#work">Explore projects <span aria-hidden="true">↗</span></a><a class="secondary" href="#contact">Get in touch</a></div>
+        </div>
       </div>
       <div class="metrics" aria-label="Portfolio overview">
         <div><strong>04</strong><span>Featured projects</span></div>
@@ -41,26 +45,194 @@
     <section class="section projects wrap" id="work" aria-labelledby="work-heading">
       <div class="section-heading"><div><p class="kicker">01 / Engineering work</p><h2 id="work-heading">Featured projects</h2></div><p>A selection of research, simulation, and prototype work. Each study focuses on the problem, the engineering approach, and the evidence.</p></div>
       <div class="project-grid">
-        <a href="#navigation" class="project-card"><div class="project-image"><img src="assets/navigation.png" alt="Top-down drone navigation trajectory comparison from the published research paper" /><span class="image-credit">Figure from published research</span></div><div class="project-content"><p class="card-index">01 <span>Robotics / Research</span></p><h3>GPS-Denied Navigation & Sensor Fusion</h3><p>Fusing stereo-camera and inertial measurements to estimate drone motion in challenging flight sequences.</p><div class="pills"><span>UKF</span><span>Visual-Inertial Odometry</span><span>MATLAB</span></div><span class="explore">Read case study <span aria-hidden="true">↗</span></span></div></a>
-        <a href="#drilling" class="project-card"><div class="project-image"><img src="assets/robot_drilling.png" alt="SolidWorks model and schematic of a three degree of freedom robotic drilling arm from the published paper" /><span class="image-credit">Figure from published research</span></div><div class="project-content"><p class="card-index">02 <span>Robotics / Manufacturing</span></p><h3>Robotic Drilling & Joint Control</h3><p>Modeling a three-joint drilling arm and evaluating model-based control against conventional PID.</p><div class="pills"><span>SolidWorks</span><span>Simulink</span><span>Computed-Torque Control</span></div><span class="explore">Read case study <span aria-hidden="true">↗</span></span></div></a>
-        <a href="#mpc" class="project-card"><div class="project-image"><img src="assets/mpc_comparison.png" alt="Plot comparing model predictive control and pole-placement feedback input in the inverted pendulum simulation" /><span class="image-credit">Figure from course project report</span></div><div class="project-content"><p class="card-index">03 <span>Control Systems / Optimization</span></p><h3>Constrained Model Predictive Control</h3><p>Designing and testing an MPC controller for an unstable inverted-pendulum system with explicit constraints.</p><div class="pills"><span>MPC</span><span>LQR</span><span>Optimization</span></div><span class="explore">Read case study <span aria-hidden="true">↗</span></span></div></a>
-        <a href="#filtration" class="project-card"><div class="project-image filtration-placeholder"><div class="filtration-graphic" aria-hidden="true"><span>01</span><i></i><span>02</span><i></i><span>03</span><i></i><span>04</span><i></i><span>05</span></div><div class="coming-soon">Original prototype images to be added</div></div><div class="project-content"><p class="card-index">04 <span>Mechatronics / Hardware</span></p><h3>Automated Water Filtration System</h3><p>A five-stage electromechanical prototype integrating sensing, actuation, hardware assembly, and automation.</p><div class="pills"><span>Arduino</span><span>Sensor Integration</span><span>Prototyping</span></div><span class="explore">Read case study <span aria-hidden="true">↗</span></span></div></a>
+        <a href="#navigation" class="project-card"><div class="project-image"><img src="assets/navigation_drone.png" alt="AscTec Firefly six-rotor drone with stereo-camera payload" loading="lazy" /><span class="image-credit">AscTec Firefly · Hex-rotor UAV</span></div><div class="project-content"><p class="card-index">01 <span>Robotics / Research</span></p><h3>GPS-Denied Navigation & Sensor Fusion</h3><p>Fusing stereo-camera and inertial measurements to estimate drone motion in challenging flight sequences.</p><div class="pills"><span>UKF</span><span>Visual-Inertial Odometry</span><span>MATLAB</span></div><span class="explore">Read case study <span aria-hidden="true">↗</span></span></div></a>
+        <a href="#drilling" class="project-card"><div class="project-image"><img src="assets/drilling_cad.png" alt="SolidWorks CAD rendering of the 3-DOF robotic drilling arm" /><span class="image-credit">SolidWorks CAD model</span></div><div class="project-content"><p class="card-index">02 <span>Robotics / Manufacturing</span></p><h3>Robotic Drilling & Joint Control</h3><p>Modeling a three-joint drilling arm and evaluating model-based control against conventional PID.</p><div class="pills"><span>SolidWorks</span><span>Simulink</span><span>Computed-Torque Control</span></div><span class="explore">Read case study <span aria-hidden="true">↗</span></span></div></a>
+        <a href="#mpc" class="project-card"><div class="project-image"><img src="assets/mpc_pendulum_model.png" alt="Cart and inverted pendulum system showing the cart mass, pendulum mass, applied force and pendulum angle" loading="lazy" /><span class="image-credit">Inverted pendulum / System model</span></div><div class="project-content"><p class="card-index">03 <span>Control Systems / Optimization</span></p><h3>Constrained Model Predictive Control</h3><p>Designing and testing an MPC controller for an unstable inverted-pendulum system with explicit constraints.</p><div class="pills"><span>MPC</span><span>LQR</span><span>Optimization</span></div><span class="explore">Read case study <span aria-hidden="true">↗</span></span></div></a>
+        <a href="#filtration" class="project-card"><div class="project-image"><img src="assets/filtration_visualization.png" alt="Assembled automated water filtration prototype showing the pump, filter housings, tubing and control electronics" loading="lazy" /><span class="image-credit">Senior capstone prototype</span></div><div class="project-content"><p class="card-index">04 <span>Mechatronics / Hardware</span></p><h3>Automated Water Filtration System</h3><p>A three-stage electromechanical prototype integrating sensing, actuation, hardware assembly, and automation.</p><div class="pills"><span>Arduino</span><span>Sensor Integration</span><span>Prototyping</span></div><span class="explore">Read case study <span aria-hidden="true">↗</span></span></div></a>
       </div>
     </section>
 
     <section class="section case-studies" aria-labelledby="case-heading">
       <div class="wrap"><p class="kicker">02 / A closer look</p><h2 id="case-heading" class="section-title">From problem to result</h2></div>
-      <article class="case wrap" id="navigation"><div class="case-side"><p class="case-number">PROJECT / 01</p><h3>GPS-Denied Navigation & Sensor Fusion</h3><p class="case-context">Master's thesis research · Carleton University · 2024–2026</p><a class="text-link" href="https://doi.org/10.1016/j.measurement.2026.121964" target="_blank" rel="noopener noreferrer">Published journal article <span aria-hidden="true">↗</span></a></div><div class="case-main"><div class="result-metric"><strong>0.26 m</strong><span>Position RMSE on a difficult recorded drone-flight sequence, versus 0.33 m for a quaternion UKF benchmark.</span></div><h4>The challenge</h4><p>Estimate position and orientation when GPS is unavailable, while managing drift from inertial sensors and uncertainty in visual measurements.</p><h4>What I developed</h4><p>A dual quaternion-based Unscented Kalman Filter using a six-dimensional local pose-error representation and tightly coupled stereo visual-inertial measurements. Tested on three recorded EuRoC drone-flight sequences and compared with benchmark filters.</p><figure class="inline-figure"><img src="assets/navigation.png" alt="Top-down trajectory plot with ground truth and three navigation estimator trajectories" loading="lazy" /><figcaption>Trajectory comparison reproduced from the author's published navigation research. The values above are simulation/recorded-dataset results, not physical flight-test measurements.</figcaption></figure></div></article>
-      <article class="case wrap" id="drilling"><div class="case-side"><p class="case-number">PROJECT / 02</p><h3>Robotic Drilling & Joint Control</h3><p class="case-context">Research internship · KFUPM · Summer 2023</p><a class="text-link" href="https://doi.org/10.1109/ICETSIS61505.2024.10459489" target="_blank" rel="noopener noreferrer">IEEE conference paper <span aria-hidden="true">↗</span></a></div><div class="case-main"><div class="result-metric"><strong>98% / 94%</strong><span>Reductions in simulated end-effector position-tracking RMSE along the X / Y axes using computed-torque control compared with PID.</span></div><h4>The challenge</h4><p>Design a robotic drilling model that can follow a target end-effector trajectory while accounting for coupled joint dynamics and the torques required by the task.</p><h4>What I developed</h4><p>A 3-DOF articulated-arm model in SolidWorks and MATLAB/Simulink. Derived the robot's kinematics and dynamics, planned trajectories, and evaluated PID and computed-torque control using simulation tracking-error metrics.</p><figure class="inline-figure"><img src="assets/robot_drilling.png" alt="CAD rendering and kinematic schematic of the robotic drilling manipulator" loading="lazy" /><figcaption>CAD model and kinematic schematic from the IEEE paper.</figcaption></figure></div></article>
-      <article class="case wrap" id="mpc"><div class="case-side"><p class="case-number">PROJECT / 03</p><h3>Constrained Model Predictive Control</h3><p class="case-context">Graduate course project · Carleton University · 2024–2025</p></div><div class="case-main"><div class="result-metric three"><div><strong>20</strong><span>Prediction steps</span></div><div><strong>5</strong><span>Control steps</span></div><div><strong>50 ms</strong><span>Sampling period</span></div></div><h4>The challenge</h4><p>Stabilize an inherently unstable inverted pendulum while accounting for actuator-force and state constraints, and examine the effects of disturbances and model mismatch.</p><h4>What I developed</h4><p>A constrained MPC formulation tested with linearized and nonlinear pendulum dynamics. In the reported setup, the actuator-force range was relaxed from ±10 N to ±15 N to make the specified state-constrained problem feasible. The project also studied LQR behavior and terminal-set constraints.</p><figure class="inline-figure"><img src="assets/mpc_comparison.png" alt="Simulated MPC and conventional state-feedback control inputs" loading="lazy" /><figcaption>Simulation comparison from the course report. This plot is illustrative of the controller response and is not a numerical RMSE claim.</figcaption></figure></div></article>
-      <article class="case wrap" id="filtration"><div class="case-side"><p class="case-number">PROJECT / 04</p><h3>Automated Water Filtration System</h3><p class="case-context">Senior capstone · KFUPM · 2023</p></div><div class="case-main"><div class="result-metric three"><div><strong>5</strong><span>Filtration stages</span></div><div><strong>4</strong><span>Sensor types</span></div><div><strong>1</strong><span>Integrated prototype</span></div></div><h4>The challenge</h4><p>Build an automated water-treatment prototype combining a mechanical fluid circuit with sensor-driven operation and fault handling.</p><h4>What I developed</h4><p>An Arduino Mega-based system integrating pressure, temperature, flow, and level sensing with pump and valve actuation. I contributed to component procurement, wiring, system assembly, and troubleshooting, including resolving fluid leaks by changing fittings and adding sealant.</p><div class="media-pending"><span aria-hidden="true">◫</span><strong>Project photos and video</strong><p>This area is reserved for your actual prototype, wiring, sensors, control hardware, and demonstration footage.</p></div></div></article>
+      <article class="case wrap" id="navigation"><div class="case-side"><p class="case-number">PROJECT / 01</p><h3>GPS-Denied Navigation & Sensor Fusion</h3><p class="case-context">Master's thesis research · Carleton University · 2024–2026</p><a class="text-link" href="https://doi.org/10.1016/j.measurement.2026.121964" target="_blank" rel="noopener noreferrer">Published journal article <span aria-hidden="true">↗</span></a></div><div class="case-main"><div class="result-metric"><strong>0.26 m</strong><span>Position RMSE on a difficult recorded drone-flight sequence, versus 0.33 m for a quaternion UKF benchmark.</span></div><h4>The challenge</h4><p>Estimate position and orientation when GPS is unavailable, while managing drift from inertial sensors and uncertainty in visual measurements.</p><h4>What I developed</h4><p>A dual quaternion-based Unscented Kalman Filter using a six-dimensional local pose-error representation and tightly coupled stereo visual-inertial measurements. Tested on three recorded EuRoC drone-flight sequences and compared with benchmark filters.</p><section class="navigation-showcase" aria-label="GPS-denied navigation research gallery">
+  <div class="navigation-showcase-intro">
+    <span class="navigation-visual-index">Research visuals / Visual-inertial navigation</span>
+    <p>DQUKF architecture, trajectory-estimation performance, and visual-inertial processing using the EuRoC MAV dataset.</p>
+  </div>
+  <figure class="navigation-visual-panel navigation-workflow-panel">
+    <div class="navigation-media-heading">
+      <span class="navigation-visual-index">01 / Estimation framework</span>
+      <strong>Dual-quaternion UKF: prediction and correction workflow</strong>
+    </div>
+    <div class="navigation-figure-frame navigation-workflow-frame">
+      <a href="assets/navigation_workflow.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size navigation workflow diagram">
+        <img src="assets/navigation_workflow.png" alt="DQUKF workflow: inertial measurements drive sigma-point propagation and state prediction; visual features update the state when stereo-camera measurements are available" loading="lazy" />
+      </a>
+    </div>
+    <figcaption>The filter propagates its state estimate using inertial measurements, then incorporates stereo-camera feature observations when available to correct drift. Select the diagram to view it full size.</figcaption>
+  </figure>
+  <figure class="navigation-visual-panel">
+    <div class="navigation-media-heading">
+      <span class="navigation-visual-index">02 / Estimation accuracy</span>
+      <strong>Estimated flight path versus ground truth</strong>
+    </div>
+    <div class="navigation-figure-frame">
+      <img src="assets/navigation_trajectory.png" alt="Top-down trajectory comparison of ground truth, MEKF, quaternion UKF, and dual-quaternion UKF" loading="lazy" />
+    </div>
+    <figcaption>The recorded-flight trajectory is compared against ground truth and benchmark filters (MEKF and QUKF). The dashed blue curve represents the proposed DQUKF.</figcaption>
+  </figure>
+  <figure class="navigation-visual-panel navigation-video-panel">
+    <div class="navigation-media-heading">
+      <span class="navigation-visual-index">03 / Stereo visual-inertial processing</span>
+      <strong>Feature tracking and navigation estimation</strong>
+    </div>
+    <video controls preload="metadata" playsinline aria-label="Recorded demonstration of stereo image tracking, three-dimensional flight trajectory, and navigation error plots">
+      <source src="assets/navigation_motion.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <figcaption>Testing on the EuRoC MAV dataset using recorded stereo-camera and inertial measurements.</figcaption>
+  </figure>
+</section></div></article>
+      <article class="case wrap" id="drilling"><div class="case-side"><p class="case-number">PROJECT / 02</p><h3>Robotic Drilling & Joint Control</h3><p class="case-context">Research internship · KFUPM · Summer 2023</p><a class="text-link" href="https://doi.org/10.1109/ICETSIS61505.2024.10459489" target="_blank" rel="noopener noreferrer">IEEE conference paper <span aria-hidden="true">↗</span></a></div><div class="case-main"><div class="result-metric"><strong>98% / 94%</strong><span>Reductions in simulated end-effector position-tracking RMSE along the X / Y axes using computed-torque control compared with PID.</span></div><h4>The challenge</h4><p>Design a robotic drilling model that can follow a target end-effector trajectory while accounting for coupled joint dynamics and the torques required by the task.</p><h4>What I developed</h4><p>A 3-DOF articulated-arm model in SolidWorks and MATLAB/Simulink. Derived the robot's kinematics and dynamics, planned trajectories, and evaluated PID and computed-torque control using simulation tracking-error metrics.</p><section class="drilling-showcase" aria-label="Robotic drilling engineering gallery">
+  <div class="drilling-gallery-intro">
+    <span class="drilling-eyebrow">Design / Analysis / Simulation</span>
+    <p>Explore the robot design, kinematic model, Simulink control architecture, and simulated motion.</p>
+  </div>
+
+  <div class="drilling-visual-grid">
+    <figure class="drilling-visual">
+      <div class="drilling-visual-frame">
+        <img src="assets/drilling_cad.png" alt="SolidWorks CAD rendering of the three-joint robotic drilling arm" loading="lazy" />
+      </div>
+      <figcaption>
+        <span class="drilling-visual-index">01 / Mechanical design</span>
+        <strong>SolidWorks model</strong>
+        <span>CAD assembly of the 3-DOF drilling manipulator.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="drilling-visual">
+      <div class="drilling-visual-frame">
+        <img src="assets/drilling_kinematics.png" alt="Three-link planar robot kinematic schematic with joint angles and link lengths" loading="lazy" />
+      </div>
+      <figcaption>
+        <span class="drilling-visual-index">02 / Mathematical modeling</span>
+        <strong>Kinematic model</strong>
+        <span>Link geometry and joint coordinates used to derive forward and inverse kinematics.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="drilling-visual drilling-visual-wide">
+      <div class="drilling-visual-frame drilling-visual-frame-wide">
+        <img src="assets/drilling_simulink.png" alt="MATLAB Simulink block diagram of robot inverse kinematics, trajectory generation, external force and PID joint control" loading="lazy" />
+      </div>
+      <figcaption>
+        <span class="drilling-visual-index">03 / Control implementation</span>
+        <strong>MATLAB/Simulink architecture</strong>
+        <span>Trajectory planning, inverse kinematics, external force modeling, and joint-level PID feedback.</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <figure class="drilling-video-panel">
+    <div class="drilling-video-heading">
+      <span class="drilling-visual-index">04 / Motion simulation</span>
+      <strong>Robot arm in motion</strong>
+    </div>
+    <video controls preload="metadata" playsinline aria-label="Recorded simulation animation of the robotic drilling arm">
+      <source src="assets/robot_arm_demo.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <figcaption>Recorded 3D animation from the robot simulation environment; not a physical hardware demonstration.</figcaption>
+  </figure>
+</section></div></article>
+      <article class="case wrap" id="mpc"><div class="case-side"><p class="case-number">PROJECT / 03</p><h3>Constrained Model Predictive Control</h3><p class="case-context">Graduate course project · Carleton University · 2024–2025</p></div><div class="case-main"><div class="result-metric three"><div><strong>20</strong><span>Prediction steps</span></div><div><strong>5</strong><span>Control steps</span></div><div><strong>50 ms</strong><span>Sampling period</span></div></div><h4>The challenge</h4><p>Stabilize an inherently unstable inverted pendulum while accounting for actuator-force and state constraints, and examine the effects of disturbances and model mismatch.</p><h4>What I developed</h4><p>A constrained MPC formulation tested with linearized and nonlinear pendulum dynamics. In the reported setup, the actuator-force range was relaxed from ±10 N to ±15 N to make the specified state-constrained problem feasible. The project also studied LQR behavior and terminal-set constraints.</p><section class="mpc-showcase" aria-label="Model predictive control project gallery">
+  <div class="mpc-showcase-intro">
+    <span class="mpc-visual-index">Control engineering / MATLAB simulation</span>
+    <p>From modeling the unstable cart–pendulum system to comparing prediction horizons and controller input behavior.</p>
+  </div>
+
+  <figure class="mpc-model-panel">
+    <div class="mpc-model-art">
+      <img src="assets/mpc_pendulum_model.png" alt="Cart-pole system with cart displacement x, pendulum angle theta, cart mass M, pendulum mass m and applied force F" loading="lazy" />
+    </div>
+    <figcaption>
+      <span class="mpc-visual-index">01 / System modeling</span>
+      <strong>Inverted pendulum on a cart</strong>
+      <span>A nonlinear, underactuated system with two degrees of freedom: cart translation and pendulum rotation. The model was derived using Lagrangian dynamics, linearized about the upright equilibrium, and discretized for controller design.</span>
+    </figcaption>
+  </figure>
+
+  <figure class="mpc-result-panel">
+    <div class="mpc-media-heading">
+      <span class="mpc-visual-index">02 / Unconstrained MPC</span>
+      <strong>Effect of prediction horizon on cart displacement</strong>
+    </div>
+    <a class="mpc-plot-image" href="assets/mpc_horizon_response.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size MPC prediction-horizon comparison plot">
+      <img src="assets/mpc_horizon_response.png" alt="Simulated cart-displacement trajectories for MPC horizons N equals 10, 30 and 50, compared with LQR" loading="lazy" />
+    </a>
+    <figcaption>With an unconstrained linear model, increasing the MPC prediction horizon from 10 to 50 steps brings the cart-displacement response closer to the LQR benchmark. Select the plot for a full-size view.</figcaption>
+  </figure>
+
+  <figure class="mpc-result-panel">
+    <div class="mpc-media-heading">
+      <span class="mpc-visual-index">03 / Constrained MPC</span>
+      <strong>Actuator input: MPC versus pole-placement feedback</strong>
+    </div>
+    <a class="mpc-plot-image" href="assets/mpc_comparison.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size MPC and pole-placement controller comparison plot">
+      <img src="assets/mpc_comparison.png" alt="Simulation comparison showing bounded MPC control input versus a more aggressive, oscillatory pole-placement feedback input" loading="lazy" />
+    </a>
+    <figcaption>The constrained MPC response avoids the large initial control excursion and oscillation observed with conventional pole-placement feedback in this simulation. This chart compares actuator input, not trajectory-tracking RMSE.</figcaption>
+  </figure>
+</section></div></article>
+      <article class="case wrap" id="filtration"><div class="case-side"><p class="case-number">PROJECT / 04</p><h3>Automated Water Filtration System</h3><p class="case-context">Senior capstone · KFUPM · 2023</p></div><div class="case-main"><div class="result-metric three"><div><strong>3</strong><span>Filtration stages</span></div><div><strong>4</strong><span>Sensor types</span></div><div><strong>1</strong><span>Integrated prototype</span></div></div><h4>The challenge</h4><p>Build an automated water-treatment prototype combining a mechanical fluid circuit with sensor-driven operation and fault handling.</p><h4>What I developed</h4><p>An Arduino Mega-based system integrating pressure, temperature, flow, and level sensing with pump and valve actuation. I contributed to component procurement, wiring, system assembly, and troubleshooting, including resolving fluid leaks by changing fittings and adding sealant.</p><figure class="inline-figure"><img src="assets/filtration_visualization.png" alt="Water filtration capstone prototype with Arduino-based controls and integrated filtration hardware" loading="lazy" /><figcaption>Automated water filtration prototype developed for the senior capstone project.</figcaption></figure></div></article>
     </section>
 
-    <section class="section wrap extras" id="about"><div class="section-heading"><div><p class="kicker">03 / Additional work</p><h2>Mechanical design & automation</h2></div><p>Short project snapshots can be expanded into full case studies when original photos, CAD renders, and test files are available.</p></div><div class="mini-grid"><div><span class="mini-count">01</span><h3>2-DOF Robotic Manipulator</h3><p>Designed components in SolidWorks, 3D-printed and assembled the mechanism, and tested pick-and-place motions.</p></div><div><span class="mini-count">02</span><h3>PLC Material Sorting</h3><p>Implemented ladder logic to use sensor inputs for automated material-routing decisions on a conveyor.</p></div><div><span class="mini-count">03</span><h3>Robotic Gripper Design</h3><p>Evaluated a robotic gripper against a 150 kg design-load specification and a target mass below 5 kg.</p></div></div><div class="about-strip"><div><p class="kicker">Tools & approaches</p><h3>Engineering across hardware and algorithms.</h3></div><div class="skill-chips"><span>MATLAB / Simulink</span><span>Python</span><span>SolidWorks</span><span>Sensor fusion</span><span>MPC & LQR</span><span>Robot kinematics</span><span>Arduino</span><span>PLC ladder logic</span><span>Prototyping</span><span>ROS 2 fundamentals</span></div></div></section>
-
+    <section class="section wrap extras" id="design-automation" aria-labelledby="additional-work-heading">
+      <div class="section-heading">
+        <div><p class="kicker">03 / Additional work</p><h2 id="additional-work-heading">Mechanical design &amp; automation</h2></div>
+        <p>Additional experience in mechanical design, robotics prototyping, and industrial automation.</p>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-project">
+          <span class="mini-count">01</span>
+          <figure class="mini-project-media">
+            <a href="assets/additional_manipulator.png" target="_blank" rel="noopener noreferrer" aria-label="View larger image of the 2-DOF robotic manipulator">
+              <img src="assets/additional_manipulator.png" alt="Visualization of a two-degree-of-freedom servo robotic manipulator with electromagnetic end effector, yellow conveyor belt, metal-detecting inductive sensor, Arduino controls and 12-volt battery" loading="lazy" />
+            </a>
+            <figcaption>2-DOF sorting prototype · Visual reconstruction</figcaption>
+          </figure>
+          <h3>2-DOF Robotic Manipulator</h3>
+          <p>Designed components in SolidWorks, 3D-printed and assembled the mechanism, and tested pick-and-place motions.</p>
+        </div>
+        <div class="mini-project">
+          <span class="mini-count">02</span>
+          <figure class="mini-project-media">
+            <a href="assets/additional_plc_workcell.png" target="_blank" rel="noopener noreferrer" aria-label="View larger image of the PLC material sorting workcell">
+              <img src="assets/additional_plc_workcell.png" alt="Annotated view of an industrial PLC sorting workcell, showing dispensers, height and width gauges, inductive and optical sensors, part manipulators, assembly chutes, and reject boxes" loading="lazy" />
+            </a>
+            <figcaption>34-004 workcell · Illustrated equipment layout</figcaption>
+          </figure>
+          <h3>PLC Material Sorting</h3>
+          <p>Implemented ladder logic to use sensor inputs for automated material-routing decisions on a conveyor.</p>
+        </div>
+        <div class="mini-project">
+          <span class="mini-count">03</span>
+          <figure class="mini-project-media">
+            <a href="assets/additional_robotic_gripper.png" target="_blank" rel="noopener noreferrer" aria-label="View larger original SolidWorks exploded assembly of the robotic gripper">
+              <img src="assets/additional_robotic_gripper.png" alt="Original SolidWorks exploded-view CAD model of the four-finger robotic gripper, with cylindrical actuator, linkages, gripper fingers, and assembly pins" loading="lazy" />
+            </a>
+            <figcaption>Original SolidWorks CAD · Exploded assembly</figcaption>
+          </figure>
+          <h3>Robotic Gripper Design</h3>
+          <p>Evaluated a robotic gripper against a 150 kg design-load specification and a target mass below 5 kg.</p>
+        </div>
+      </div>
+      <div class="about-strip"><div><p class="kicker">Tools &amp; approaches</p><h3>Engineering across hardware and algorithms.</h3></div><div class="skill-chips"><span>MATLAB / Simulink</span><span>Python</span><span>SolidWorks</span><span>Sensor fusion</span><span>MPC &amp; LQR</span><span>Robot kinematics</span><span>Arduino</span><span>PLC ladder logic</span><span>Prototyping</span><span>ROS 2 fundamentals</span></div></div>
+    </section>
     <section class="section wrap pubs" id="publications"><div class="section-heading"><div><p class="kicker">04 / Research output</p><h2>Publications & intellectual property</h2></div><p>Two first-author publications, one co-authored journal review, and three patent applications as co-inventor.</p></div><div class="pub-list"><a href="https://doi.org/10.1016/j.measurement.2026.121964" target="_blank" rel="noopener noreferrer"><span>2026 · Measurement · First author</span><strong>Dual Quaternion-Based Unscented Kalman Filter with Visual Inertial Odometry for Navigation in GPS-Denied Environments</strong><span aria-hidden="true">↗</span></a><a href="https://doi.org/10.1109/ICETSIS61505.2024.10459489" target="_blank" rel="noopener noreferrer"><span>2024 · IEEE ICETSIS · First author</span><strong>Position and Torque Joint Control for Precision Drilling in Robotic Manufacturing Applications</strong><span aria-hidden="true">↗</span></a><div class="pub-plain"><span>2025 · Arabian Journal for Science and Engineering · Co-author</span><strong>Actuated Rotational Adaptive Optics in Shaping the Next Generation of Optical Systems: An In-depth Analysis</strong></div><div class="pub-plain"><span>Patent applications</span><strong>Co-inventor on two U.S. membrane-distillation applications and one Saudi vehicular desalination application.</strong></div></div></section>
 
-    <section class="contact" id="contact"><div class="wrap contact-inner"><div><p class="kicker">05 / Contact</p><h2>Have an engineering problem worth solving?</h2><p>I'm open to early-career roles in controls, robotics, mechatronics, and mechanical engineering, and willing to relocate.</p></div><div class="contact-actions"><a class="primary" href="mailto:MohamedKhalifa15501@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="secondary" href="assets/Mohamed_Khalifa_Resume.pdf" download>Download resume</a></div></div></section>
+    <section class="contact" id="contact"><div class="wrap contact-inner"><div><p class="kicker">05 / Contact</p><h2>Have an engineering problem worth solving?</h2><p>I'm open to career opportunities in controls, robotics, mechatronics, and mechanical engineering, and willing to relocate.</p></div><div class="contact-actions"><a class="primary" href="mailto:MohamedKhalifa15501@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="secondary" href="assets/Mohamed_Khalifa_Resume.pdf" download>Download resume</a></div></div></section>
   </main>
   <footer><div class="wrap footer-inner"><span>© 2026 Mohamed Khalifa</span><span>Engineering portfolio · Designed for clarity and evidence</span><a href="#top">Back to top ↑</a></div></footer>
 </body>
