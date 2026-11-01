@@ -486,3 +486,213 @@
   .hero-aside .hero-actions { flex-basis: 160px; }
   .hero-aside .secondary { padding: 12px 6px; }
 }
+
+
+/* =====================================================
+   RECRUITER-FOCUSED LAYOUT REFRESH (NOV 2026)
+   Prominent section labels, full-width case studies, and
+   two-column project summaries. Existing media preserved.
+   ===================================================== */
+.kicker {
+  font-size: 13px;
+  letter-spacing: .10em;
+  line-height: 1.45;
+  font-weight: 800;
+}
+.section-heading .kicker, .case-studies .kicker {
+  margin-bottom: 12px;
+}
+.section-heading h2, .section-title {
+  margin-top: 10px;
+}
+.hero .eyebrow {
+  letter-spacing: .13em;
+  line-height: 1.6;
+}
+
+/* Project metadata appears at the top, not in a permanently
+   reserved left sidebar. Media can use the available width. */
+.case {
+  display: block;
+  padding-top: 62px;
+  padding-bottom: 70px;
+}
+.case-head {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 38px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.case-side { min-width: 0; }
+.case-side h3 {
+  font-size: clamp(27px, 3.3vw, 39px);
+  line-height: 1.13;
+  max-width: 540px;
+  margin-bottom: 13px;
+}
+.case-context { margin-top: 0; }
+.case-head .result-metric {
+  min-width: 0;
+  padding: 24px 26px;
+  min-height: 126px;
+}
+.case-head .result-metric.three {
+  align-items: center;
+}
+.case-main { min-width: 0; }
+.case-overview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 18px;
+  margin: 26px 0 30px;
+}
+.case-overview-item {
+  padding: 23px 25px 25px;
+  background: #f7f9f6;
+  border: 1px solid var(--line);
+  min-width: 0;
+}
+.case-overview-item h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 750;
+  letter-spacing: -.01em;
+}
+.case-overview-item p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+.case-main > .navigation-showcase,
+.case-main > .drilling-showcase,
+.case-main > .mpc-showcase { margin-top: 20px; }
+.case-main > .inline-figure { margin-top: 28px; }
+
+@media (max-width: 850px) {
+  .case-head {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .case-head .result-metric { min-height: 0; }
+}
+@media (max-width: 640px) {
+  .kicker { font-size: 12px; letter-spacing: .08em; }
+  .case { padding-top: 42px; padding-bottom: 52px; }
+  .case-head { padding-bottom: 24px; gap: 16px; }
+  .case-side { margin-bottom: 0; }
+  .case-overview { grid-template-columns: 1fr; gap: 12px; margin: 20px 0 24px; }
+  .case-overview-item { padding: 18px 19px; }
+  .case-head .result-metric.three { gap: 8px; }
+}
+
+
+/* ============================================================
+   COMPARISON GALLERIES — NAVIGATION + MPC
+   Desktop: two technical visuals beside each other.
+   Navigation video and MPC system model remain full width.
+   These rules affect only Projects 01 and 03.
+   ============================================================ */
+
+.navigation-showcase,
+.mpc-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
+  align-items: stretch;
+}
+
+.navigation-showcase-intro,
+.navigation-video-panel,
+.mpc-showcase-intro,
+.mpc-model-panel {
+  grid-column: 1 / -1;
+}
+
+.navigation-showcase-intro,
+.mpc-showcase-intro { padding-bottom: 0; }
+
+/* Equal-height visual cards so the lower captions align. */
+.navigation-showcase > .navigation-visual-panel,
+.mpc-showcase > .mpc-result-panel {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-width: 0;
+}
+
+.navigation-showcase > .navigation-visual-panel:not(.navigation-video-panel) .navigation-figure-frame {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 334px;
+}
+
+.navigation-showcase > .navigation-visual-panel:not(.navigation-video-panel) .navigation-figure-frame img {
+  max-height: 320px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.navigation-workflow-frame a { width: 100%; }
+.navigation-video-panel video { width: 100%; }
+
+/* The model spans both columns; its two simulation comparisons sit below. */
+.mpc-showcase > .mpc-model-panel { margin: 0; }
+.mpc-showcase > .mpc-result-panel .mpc-plot-image {
+  flex: 1 1 auto;
+  min-height: 300px;
+}
+.mpc-showcase > .mpc-result-panel .mpc-plot-image img {
+  max-height: 320px;
+}
+
+/* On tablets and phones, stack figures to preserve legibility. */
+@media (max-width: 900px) {
+  .navigation-showcase,
+  .mpc-showcase { grid-template-columns: 1fr; gap: 16px; }
+  .navigation-showcase > .navigation-visual-panel:not(.navigation-video-panel) .navigation-figure-frame {
+    min-height: 0;
+  }
+  .navigation-showcase > .navigation-visual-panel:not(.navigation-video-panel) .navigation-figure-frame img {
+    max-height: 500px;
+  }
+  .mpc-showcase > .mpc-result-panel .mpc-plot-image { min-height: 0; }
+  .mpc-showcase > .mpc-result-panel .mpc-plot-image img { max-height: 420px; }
+}
+
+/* Homepage eyebrow: improved size and spacing, without changing other section labels. */
+.hero .hero-location {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 5px;
+  font-size: 13px;
+  letter-spacing: .12em;
+  line-height: 1.5;
+}
+.hero .hero-location .status-dot { margin-right: 0; flex-shrink: 0; }
+.hero .hero-location-divider { opacity: .65; }
+@media (max-width: 440px) {
+  .hero .hero-location { column-gap: 10px; font-size: 12px; }
+}
+
+
+/* Project 02: place Simulink figure heading above its full-width image. */
+.drilling-wide-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 18px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.drilling-wide-heading strong {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.35;
+  color: var(--ink);
+}
